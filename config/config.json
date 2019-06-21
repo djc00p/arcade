@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "DJC00P",
+    "username": "djc00p",
     "password": null,
     "database": "arcade_development",
     "host": "127.0.0.1",
@@ -8,7 +8,7 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "DJC00P",
+    "username": "djc00p",
     "password": null,
     "database": "arcade_test",
     "host": "127.0.0.1",
@@ -16,7 +16,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "DJC00P",
+    "username": "djc00p",
     "password": null,
     "database": "arcade_production",
     "host": "127.0.0.1",
