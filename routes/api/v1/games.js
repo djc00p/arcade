@@ -48,7 +48,7 @@ router.post("/", function(req, res, next) {
     res.setHeader("Content-Type", "application/json");
     res.status(500).send({ error });
   });
-}); 
+});
 
 // UPDATE Game
 router.put("/:id", function(req, res, next) {
@@ -68,6 +68,23 @@ router.put("/:id", function(req, res, next) {
     .then(game => {
     res.setHeader("Content-Type", "application/json");
     res.status(202).send(JSON.stringify(game));
+  })
+    .catch(error => {
+    res.setHeader("Content-Type", "application/json");
+    res.status(500).send({ error });
+  });
+});
+
+// DELETE Game
+router.delete("/:id", function(req, res, next) {
+  Game.destroy({
+    where:{
+      id: req.params.id
+    }
+  })
+    .then(game => {
+    res.setHeader("Content-Type", "application/json");
+    res.status(204).send(JSON.stringify(game));
   })
     .catch(error => {
     res.setHeader("Content-Type", "application/json");
